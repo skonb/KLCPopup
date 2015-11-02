@@ -142,7 +142,8 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
     if (_shouldDismissOnBackgroundTouch) {
       [self dismiss:YES];
     }
-    
+      [_delegate popupBackgroundDidTap:self];
+      
     // If no mask, then return nil so touch passes through to underlying views.
     if (_maskType == KLCPopupMaskTypeNone) {
       return nil;
